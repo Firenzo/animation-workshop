@@ -1,0 +1,11 @@
+.playground-area {
+  margin-top: 2.5rem;
+}
+
+.playground {
+  height: 700px;
+  width: 100%;
+  background: white;
+  border-radius: 10px;
+  margin-top: 2.5rem;
+}

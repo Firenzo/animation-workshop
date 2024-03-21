@@ -1,0 +1,149 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Londrina Solid", sans-serif;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 300;
+  word-break: break-word;
+  margin-bottom: 2rem;
+
+  @media screen and (min-width: 400px) {
+    font-size: 4rem;
+    width: 8ch;
+  }
+
+  @media screen and (min-width: 550px) {
+    font-size: 5rem;
+    width: 11ch;
+  }
+
+  @media screen and (min-width: 650px) {
+    width: 14ch;
+  }
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+
+  @media screen and (min-width: 400px) {
+    font-size: 2.3rem;
+  }
+
+  @media screen and (min-width: 600px) {
+    font-size: 3rem;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 4rem;
+  }
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+h4,
+.h4 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+h5 {
+  font-size: 0.875rem;
+  margin-bottom: 0.25rem;
+}
+
+h6 {
+  font-size: 0.75rem;
+  margin-bottom: 0.25rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.order-1 {
+  @media screen and (min-width: 1024px) {
+    order: 1;
+  }
+}
+
+.order-2 {
+  @media screen and (min-width: 1024px) {
+    order: 2;
+  }
+}
+
+.hard-shadow-4 {
+  box-shadow: 4px 4px 0px black;
+}
+
+.hard-shadow-7 {
+  box-shadow: 7px 7px 0px black;
+}
+
+.hard-shadow-8 {
+  box-shadow: 8px 8px 0px black;
+}
+
+.hard-shadow-10 {
+  box-shadow: 10px 10px 0px black;
+}
+
+.soft-shadow-5 {
+  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+.soft-shadow-10 {
+  box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.stroke-4 {
+  border: 4px solid black;
+}
+
+.stroke-5 {
+  border: 5px solid black;
+}
+
+.stroke-6 {
+  border: 6px solid black;
+}
+
+.stroke-8 {
+  border: 8px solid black;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.divider {
+  background: url("../assets/svg/divider.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100px;
+  margin-bottom: 1rem;
+
+  @media screen and (min-width: 800px) {
+    height: 150px;
+  }
+  @media screen and (min-width: 1200px) {
+    height: 250px;
+  }
+
+  @media screen and (min-width: 2100px) {
+    height: 400px;
+  }
+}

@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&family=Mitr:wght@300;500&family=Rubik:wght@300;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/base-css/content-grid.css" />
+    <link rel="stylesheet" href="/base-css/base-styling.css" />
+    <link rel="stylesheet" href="/base-css/parallax.css" />
+    <link rel="stylesheet" href="/base-css/playground.css" />
+    <link rel="stylesheet" href="/base-css/utils.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="index.js"></script>
+    <script>
+      const changeSpanText = () => {
+        document
+          .querySelectorAll(".next-to-or-below")
+          .forEach((spanElement) => {
+            spanElement.innerHTML =
+              window.innerWidth < 800 ? "hieronder" : "hiernaast";
+          });
+      };
+
+      const handleDOMLoaded = () => {
+        changeSpanText();
+        window.addEventListener("resize", changeSpanText);
+      };
+
+      document.addEventListener("DOMContentLoaded", handleDOMLoaded);
+    </script>
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div class="parallax content-grid">
+        <h1 class="parallax__title">Ontdek de wereld van web animaties</h1>
+        <p class="parallax__text">
+          Een workshop voor developers met een passie voor animatie
+        </p>
+        <img class="parallax__laptop" src="/assets/png/laptop.png" />
+        <div class="parallax__wave_1 full-width"></div>
+        <div class="parallax__wave_2 full-width"></div>
+        <div class="parallax__wave_3 full-width"></div>
+      </div>
+    </header>
+    <main class="content-grid">
+      <section id="css-transitions-block" class="full-width">
+        <div class="exercise-block">
+          <div class="text-block hard-shadow-10 stroke-5">
+            <h2>CSS Transities</h2>
+            <p>
+              Animeer de elementen
+              <span class="next-to-or-below">hiernaast</span> op basis van wat
+              je hebt geleerd uit de slides. Doe dit met behulp van CSS
+              transities. Je kunt bijvoorbeeld :hover of :focus gebruiken
+              hiervoor.
+            </p>
+          </div>
+          <div class="exercise-area">
+            <div id="button-animation flex margin-bottom-1">
+              <h3>Button</h3>
+              <button class="hard-shadow-7 stroke-4">Klik hier</button>
+            </div>
+
+            <div id="button-animation flex">
+              <h3>Invoerveld</h3>
+              <input
+                type="text"
+                class="soft-shadow-5 stroke-5"
+                placeholder="blablabla...."
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="css-animations-block" class="full-width">
+        <div class="exercise-block">
+          <div class="text-block hard-shadow-10 stroke-5 order-2">
+            <h2>CSS Animaties</h2>
+            <p>Animeer deze loaders, met behulp van CSS @keyframes.</p>
+          </div>
+          <div class="exercise-area order-1">
+            <div class="spinner-wrapper">
+              <img
+                src="/assets/svg/spinner-loader.svg"
+                id="spinner-loader"
+                alt="spinner loader"
+              />
+              <p class="h4 text-align-center">Laden...</p>
+            </div>
+
+            <div class="dot-loader-wrapper">
+              <div class="dots-wrapper" id="dot-loader">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+              </div>
+              <p class="h4 text-align-center">Laden...</p>
+            </div>
+
+            <div class="progress-bar-wrapper">
+              <div class="progress-bar">
+                <div class="bar-empty hard-shadow-10 stroke-8">
+                  <div id="progress" class="progress"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="clock-exercise-block" class="full-width">
+        <div class="exercise-block">
+          <div class="text-block hard-shadow-10 stroke-5">
+            <h2>Animeer de klok</h2>
+            <p>
+              Zorg ervoor dat de klok ongeveer werkt, zoals een echte klok.<br />
+              Tip: Verander het anchor point van de wijzers met behulp van
+              transform-origin
+            </p>
+          </div>
+          <div class="exercise-area">
+            <div class="clock soft-shadow-10">
+              <div id="second-hand"></div>
+              <div id="long-hand"></div>
+              <div id="short-hand"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider full-width"></div>
+
+      <section id="gsap-explanation-block" class="full-width">
+        <div
+          class="text-block centered alt-background no-rotation hard-shadow-10 stroke-5"
+        >
+          <h2>JavaScript en GSAP</h2>
+          <p>
+            Nu gaan we aan de slag met JavaScript. Om browser bugs en quirks te
+            voorkomen gebruiken we een library GSAP. Kopieer de script tag voor
+            gsap.min.js vanuit
+            <a href="https://cdnjs.com/libraries/gsap" target="_blank"
+              >deze pagina</a
+            >
+            en implementeer deze in index.html. Ga daarna door met de opdrachten
+            hieronder.
+          </p>
+        </div>
+      </section>
+
+      <section id="gsap-exercise-block" class="full-width">
+        <div class="exercise-block">
+          <div class="text-block hard-shadow-10 stroke-5">
+            <h2>GSAP Animatie</h2>
+            <p>
+              Zorg ervoor dat het rode vierkant naar links en rechts beweegt
+              afhankelijk van welke pijl knop er geklikt wordt.
+            </p>
+          </div>
+          <div class="exercise-area">
+            <div class="gsap-exercise">
+              <button
+                id="left-arrow-button"
+                class="arrow-button stroke-4 hard-shadow-7"
+              >
+                <img src="/assets/svg/arrow-left.svg" alt="arrow left" />
+              </button>
+              <div
+                id="red-square"
+                class="red-square stroke-4 hard-shadow-7"
+              ></div>
+              <button
+                id="right-arrow-button"
+                class="arrow-button stroke-4 hard-shadow-7"
+              >
+                <img src="/assets/svg/arrow-right.svg" alt="arrow right" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="gsap-track-exercise-block" class="full-width">
+        <div class="exercise-block">
+          <div class="text-block hard-shadow-10 stroke-5 order-2">
+            <h2>Volg het spoor</h2>
+            <p>
+              Animeer de rode stip zodanig dat hij van 1 naar 2 naar 3 naar 4 en
+              daarna weer terug naar het begin gaat met een enkele klik. Op elk
+              nummer moet de rode stip een tussenstop maken. Als je wil kun je
+              de animatie meerdere malen of misschien zelfs oneindig vaak laten
+              afspelen.
+              <br /><br />
+              Tip: Gebruik de timeline functie van GSAP om dit voor elkaar te
+              krijgen.
+            </p>
+          </div>
+          <div class="exercise-area order-1">
+            <div class="cicle-exercise">
+              <div
+                id="red-circle"
+                class="red-circle hard-shadow-4 stroke-6"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="a11y-exercise-block" class="full-width">
+        <div class="exercise-block">
+          <div class="text-block hard-shadow-10 stroke-5">
+            <h2>Toegankelijke animaties</h2>
+            <p>
+              Er staan een aantal vierkantjes
+              <span class="next-to-or-below">hiernaast</span>, maar deze hebben
+              een opacity van 0, vandaar dat je ze niet kunt zien. Zorg ervoor
+              dat wanneer de knop “Maak vierkantjes zichtbaar” geklikt wordt, de
+              vierkantjes omstebeurt in faden terwijl deze zich ook verplaatsen.
+              Gebruik hiervoor de stagger functionaliteit van GSAP. Pas
+              vervolgens deze animatie aan voor mensen die liever geen beweging
+              willen door ze alleen te laten in faden. De vierkantjes hebben als
+              class name “a11y-square”.
+            </p>
+          </div>
+          <div class="exercise-area">
+            <div class="a11y-exercise-wrapper">
+              <div class="a11y-squares">
+                <div class="a11y-square stroke-6 hard-shadow-4"></div>
+                <div class="a11y-square stroke-6 hard-shadow-4"></div>
+                <div class="a11y-square stroke-6 hard-shadow-4"></div>
+                <div class="a11y-square stroke-6 hard-shadow-4"></div>
+                <div class="a11y-square stroke-6 hard-shadow-4"></div>
+              </div>
+              <button id="a11y-square-button" class="hard-shadow-7 stroke-4">
+                Maak vierkantjes zichtbaar
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider full-width"></div>
+
+      <section id="scrolltrigger-exercise-block" class="full-width">
+        <div class="text-block centered hard-shadow-10 stroke-5">
+          <h2>ScrollTrigger</h2>
+          <p>
+            Nu gaan we aan de slag met de ScrollTrigger van GSAP. Hiermee kunnen
+            we animaties laten plaatsvinden op basis van bepaald scroll gedrag.
+            Om de ScrollTrigger te kunnen gebruiken, moet deze eerst
+            geïmplementeerd worden. Kopieer de script tag voor GSAP’s
+            ScrollTrigger vanuit deze pagina en implementeer deze in index.html.
+            Kijk vervolgens of het lukt om alle opdrachten op deze pagina in te
+            laten animeren op het moment dat deze zichtbaar worden in de
+            viewport.
+          </p>
+        </div>
+      </section>
+
+      <section id="parallax-exercise-block" class="full-width">
+        <div class="text-block centered hard-shadow-10 stroke-5">
+          <h2>Parallax effect</h2>
+          <p>
+            Met de GSAP’s ScrollTrigger kunnen we ook een zogeheten
+            parallax-effect toevoegen. Dat wil zeggen dat het ene element
+            sneller of langzamer beweegt dan een ander element tijdens het
+            scrollen. Hiervoor kun je de “scrub” property gebruiken. Kijk eens
+            of het lukt om het parallax effect toe te passen op de elementen in
+            de header van deze pagina. De elementen hebben de volgende class
+            names (met dubbele underscore):
+          </p>
+
+          <ul>
+            <li>parallax__title</li>
+            <li>parallax__laptop</li>
+            <li>parallax__wave_1</li>
+            <li>parallax__wave_2</li>
+            <li>parallax__wave_3</li>
+          </ul>
+        </div>
+      </section>
+
+      <div class="divider full-width"></div>
+
+      <section id="svg-exercise-block" class="full-width">
+        <div class="exercise-block">
+          <div class="text-block hard-shadow-10 stroke-5">
+            <h2>SVG Animatie implementeren</h2>
+            <p>
+              Implementeer hier een svg animatie uit de map
+              "/assets/svg-animations/" met behulp van de Lottie player. Lees de
+              documentatie op
+              <a href="https://lottiefiles.com/web-player" target="_blank"
+                >deze pagina</a
+              >
+              door en ervaar hoe makkelijk het kan zijn om een lottie animatie
+              te implementeren!
+            </p>
+          </div>
+          <div class="exercise-area">
+            <div class="svg-exercise hard-shadow-10 stroke-8">
+              <!-- Implementeer hier de <dotlottie-player> -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="svg-exercise-2-block" class="full-width">
+        <div class="exercise-block">
+          <div class="text-block hard-shadow-10 stroke-5 order-2">
+            <h2>SVG Animatie implementeren 2</h2>
+            <p>
+              Hier gaan we weer een svg animatie implementeren, maar deze keer
+              met wat meer flexibiliteit. Om de Lottie code te kunnen gebruiken
+              dien je een ander lottie script te implementeren in je index.html.
+              Het script kun je
+              <a href="https://cdnjs.com/libraries/bodymovin" target="_blank"
+                >hier</a
+              >
+              vinden. (lottie.min.js)
+              <a href="https://airbnb.io/projects/lottie-web/" target="_blank"
+                >De documentatie van dit script staat hier.</a
+              >
+              Zorg ervoor dat de animatie zich anders gedraagd bij het klikken
+              op de knoppen. Wat deze knoppen doen mag je zelf bepalen.
+            </p>
+          </div>
+          <div class="exercise-area order-1">
+            <div class="svg-exercise hard-shadow-10 stroke-8">
+              <div class="lottie-svg-wrapper">
+                <!-- Gebruik deze div voor je lottie animatie -->
+              </div>
+            </div>
+            <div class="buttons">
+              <button id="svg-button-1" class="hard-shadow-7 stroke-4">
+                1
+              </button>
+              <button id="svg-button-2" class="hard-shadow-7 stroke-4">
+                2
+              </button>
+              <button id="svg-button-3" class="hard-shadow-7 stroke-4">
+                3
+              </button>
+              <button id="svg-button-4" class="hard-shadow-7 stroke-4">
+                4
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="playground-explanation-block" class="full-width">
+        <div
+          class="text-block centered alt-background no-rotation hard-shadow-10 stroke-5"
+        >
+          <h2>Playground</h2>
+          <p>
+            Indien je tijd over hebt, dan kun je in deze ruimte wat
+            functionaliteiten van GSAP en misschien ook lottie uitproberen.
+            Bekijk de documentatie en kijk of je een leuke uitdaging voor jezelf
+            kunt verzinnen. De documentatie van GSAP kun je
+            <a href="https://gsap.com/docs/v3/" target="_blank">hier</a> vinden.
+            De documentatie van Lottie staat
+            <a href="https://airbnb.io/projects/lottie-web/" target="_blank"
+              >hier.</a
+            >
+          </p>
+        </div>
+        <div class="playground-area">
+          <h2>Implementeer hier je eigen animatie(s)</h2>
+          <div class="playground hard-shadow-10 stroke-5">
+            <!-- Start hier met playground implementatie en zet je styling in /css/playground.css -->
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
