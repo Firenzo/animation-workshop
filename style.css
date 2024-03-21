@@ -1,0 +1,73 @@
+#spinner-loader {
+  animation: spinner 1.5s linear infinite;
+}
+
+#dot-loader {
+  .dot {
+    animation: dot-loader 0.8s ease infinite;
+    animation-direction: alternate;
+  }
+
+  .dot:nth-of-type(2) {
+    animation-delay: 0.2s;
+  }
+
+  .dot:nth-of-type(3) {
+    animation-delay: 0.4s;
+  }
+  .dot:nth-of-type(4) {
+    animation-delay: 0.6s;
+  }
+}
+
+#progress {
+  animation: progress-bar 5s ease infinite;
+}
+
+@keyframes spinner {
+  to {
+    rotate: 360deg;
+  }
+}
+
+@keyframes progress-bar {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes dot-loader {
+  to {
+    transform: translateY(-20px);
+  }
+}
+
+#second-hand {
+  transform-origin: bottom;
+  rotate: 20deg;
+  animation: clock-pointer 1s linear infinite;
+}
+
+#long-hand {
+  transform-origin: bottom;
+  rotate: 120deg;
+  animation: clock-pointer 60s linear infinite;
+}
+
+#short-hand {
+  transform-origin: bottom;
+  rotate: 220deg;
+  animation: clock-pointer 3600s linear infinite;
+}
+
+@keyframes clock-pointer {
+  from {
+    rotate: 0deg;
+  }
+  to {
+    rotate: 360deg;
+  }
+}
