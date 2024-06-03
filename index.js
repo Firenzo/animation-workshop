@@ -355,7 +355,7 @@ const buildingAnimation = lottie.loadAnimation({
   renderer: "svg",
   loop: true,
   autoplay: true,
-  path: "/assets/svg-animations/walking-watermelon.json", // the path to the animation json
+  path: "./assets/svg-animations/walking-watermelon.json", // the path to the animation json
 });
 
 svgButton1.addEventListener("click", () => {
