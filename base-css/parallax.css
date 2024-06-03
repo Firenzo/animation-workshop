@@ -21,7 +21,7 @@
 .parallax__wave_3 {
   height: 400px;
   width: 100%;
-  background: url("/assets/svg/wave-3.svg");
+  background: url("../assets/svg/wave-3.svg");
   background-size: cover;
   z-index: 10;
   position: absolute;
@@ -31,7 +31,7 @@
 .parallax__wave_2 {
   height: 400px;
   width: 100%;
-  background: url("/assets/svg/wave-2.svg");
+  background: url("../assets/svg/wave-2.svg");
   background-size: cover;
   z-index: 20;
   position: absolute;
@@ -41,7 +41,7 @@
 .parallax__wave_1 {
   height: 300px;
   width: 100%;
-  background: url("/assets/svg/wave-1.svg");
+  background: url("../assets/svg/wave-1.svg");
   background-size: cover;
   z-index: 30;
   position: absolute;

@@ -328,7 +328,7 @@ section {
     justify-content: center;
   }
   .cicle-exercise {
-    background: url("/assets/svg/circle-exercise.svg");
+    background: url("../assets/svg/circle-exercise.svg");
     background-size: cover;
     aspect-ratio: 1/1;
     width: 100%;
