@@ -1,9 +1,12 @@
 # Useful links:
 
-[Repo Link](https://github.com/Firenzo/animation-workshop)
+## This webpage
 
-[GSAP documentation](https://gsap.com/docs/v3/)
+- [Repo Link](https://github.com/Firenzo/animation-workshop)
+- [Webpage Link](https://firenzo.github.io/animation-workshop/)
 
-[Lottie player](https://lottiefiles.com/web-player)
+## Documentation
 
-[Web content Accessibility Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/)
+- [GSAP documentation](https://gsap.com/docs/v3/)
+- [Lottie player Documentation](https://lottiefiles.com/web-player)
+- [Web content Accessibility Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/)
